@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_overlay"
+    tools:context=".MyPost">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/my"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/postImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:visibility="gone"
+                        android:src="@drawable/hostel" />
+
+                    <EditText
+                        android:id="@+id/titlePost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Post Title"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/rentPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Room Rent"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/mobilePost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mobile No"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/detailsPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="105dp"
+                        android:gravity="top|left"
+                        android:hint="Details"
+                        android:singleLine="false"
+                        android:inputType="textMultiLine"
+                        />
+
+                    <Spinner
+                    android:id="@+id/roomforPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:entries="@array/roomForArray"
+                        />
+
+
+                    <Spinner
+                        android:id="@+id/tolettypePost"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:scrollbars="vertical"
+                        android:entries="@array/propertyType"
+                        />
+
+                    <Spinner
+                        android:id="@+id/monthPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:scrollbars="vertical"
+                        android:entries="@array/months"
+                        />
+
+                    <Spinner
+                        android:id="@+id/subareaPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:scrollbars="vertical"
+                        android:entries="@array/subArea"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/addressPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:hint="Full Address"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:singleLine="false" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
